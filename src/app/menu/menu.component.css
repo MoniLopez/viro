@@ -1,0 +1,104 @@
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+    height: auto !important; /* Sobrescribe la altura */
+}
+
+.mat-toolbar {
+    background-color: transparent !important; /* Sobrescribe el color de fondo */
+}
+
+.btnMenu{
+    width: 8%;
+    margin: 2%;
+}
+
+.color{
+    background-color: rgba(10, 35, 84, 0.7); 
+    padding: 2%;
+    color: #FFC900;
+    font-size: 2em;
+}
+
+.buscar{
+    background-color: rgba(10, 35, 84, 0.7); /*Maniene opacidad sólo en el fondo*/
+    border-radius: 3%;
+    align-items: center; /*Centra el contenido*/
+    color: #fff;
+    position: absolute;
+    padding: 1.5%;
+}
+
+.contenidoSidenav{
+  display: grid;
+  place-items: center;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+  
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+  
+h1.example-app-name {
+  margin-left: 8px;
+}
+  
+.example-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+      causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+  background: transparent;
+}
+  
+.example-is-mobile .example-sidenav-container {
+/* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+    `<body>` to be our scrolling element for mobile layouts. */
+flex: 1 0 auto;
+}
+
+
+.custom-input {
+  height: 26px; /* Altura deseada para el input de texto */
+  padding: 6px 12px; /* Ajusta el padding según tus necesidades */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el tamaño total del elemento */
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 0;
+  vertical-align: middle;
+  -webkit-appearance: none; /* Elimina el estilo predeterminado del checkbox */
+  appearance: none; /* Elimina el estilo predeterminado del checkbox */
+  border: 1px solid #ccc; /* Añade un borde al checkbox */
+  background-color: #fff;
+  border-radius: 3px; /* Redondea las esquinas del checkbox */
+  outline: none; /* Elimina el outline predeterminado */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+}
+
+.custom-checkbox:checked {
+  background-color: #fff; /* Color de fondo cuando está seleccionado */
+  border-color: #ccc; /* Color del borde cuando está seleccionado */
+}
+
+.custom-checkbox:checked::before {
+  content: '\2713'; /* Carácter de la marca de verificación */
+  display: block;
+  text-align: center;
+  color: #0A2354; /* Color de la marca de verificación */
+  font-size: 20px; /* Tamaño de la marca de verificación */
+  font-weight: bold;
+  line-height: 24px; /* Alinea verticalmente la marca de verificación */
+}

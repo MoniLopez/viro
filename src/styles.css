@@ -18,12 +18,17 @@ body{
     font-size: 1rem;
 }
 
-.btnGris{
-    background: #C7CBD3;
+.btnVerde{
+    background: #9FC418;
     color: #0A2354;
     border-radius: 10px;
-    border-color: #C7CBD3;
+    border-color: #9FC418;
     padding: 5px 10px;
     width: auto; /*El largo del botón dependerá del texto*/
     font-weight: bold;
+}
+
+.btnVerde:hover{
+    background: #FFC900;
+    border-color: #FFC900;
 }
