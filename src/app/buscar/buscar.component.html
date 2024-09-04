@@ -1,0 +1,107 @@
+<div class="container-center buscar">
+    <div class="row mb-3">
+      <label>Llene los campos para realizar su búsqueda</label>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label>Oficina: </label>
+      </div>
+      <div class="col">
+        <SELECT NAME="oficina">
+          <OPTION selected disabled value=""> Seleccionar Oficina</OPTION>
+          <!--Revisar si es necesario agregar atributo VALUE al consumir API-->
+          <OPTION>Acatlán de Osorio</OPTION>
+        </SELECT> 
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label>Tipo: </label>
+      </div>
+      <div class="col">
+        <SELECT NAME="tipoDoc">
+          <OPTION selected disabled value="">Tipo de documento</OPTION>
+          <OPTION>Inscripciones</OPTION>
+          <OPTION>Apéndices</OPTION>
+          <OPTION>Indices</OPTION>
+        </SELECT>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label>Año: </label>
+      </div>
+      <div class="col">
+        <SELECT NAME="anio">
+          <OPTION selected disabled value="">Año a buscar
+          <OPTION>2024</OPTION>
+        </SELECT>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label>Partida: </label>
+      </div>
+      <div class="col">
+        <input type="text" class="custom-input" name="partida">
+      </div>
+      <div class="col">
+        <input class="custom-checkbox" type="checkbox" id="indicaBis" value="valorBis" /> <!--Cambiar value al valor cuando la partida es bis--> 
+      </div>
+      <div class="col">
+        <label>Bis</label>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label>Libro: </label>
+      </div>
+      <div class="col">
+        <input type="text" name="libro">  
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col">
+        <label>¿Existe tomo? </label>
+      </div>
+      <div class="col">
+        <input type="radio" id="tomoSi" name="tomo" value="si" (change)="cambioValorTomo('si')"/>
+        <label for="tomoSi">Sí</label>
+      </div>
+      <div class="col">
+        <input type="radio" id="tomoNo" name="tomo" value="no" (change)="cambioValorTomo('no')"/>
+        <label for="tomoNo">No</label>
+      </div>
+    </div>
+    @if(selectedTomo == "si"){
+      <div class="row mb-3">
+        <div class="col">
+          <label>Tomo: </label>
+        </div>
+        <div class="col">
+          <input type="text" name="tomo">  
+        </div>
+      </div>
+    }
+    @if(selectedTomo == "no"){
+      <div class="row mb-3">
+        <div class="col">
+          <label>Año Inicial: </label>
+        </div>
+        <div class="col">
+          <input type="text" name="anioInicial">  
+        </div>
+        <div class="col">
+          <label>Año Final: </label>
+        </div>
+        <div class="col">
+          <input type="text" name="anioFinal">  
+        </div>
+      </div>
+    }
+    @if(selectedTomo != null){
+      <div class="row mb-3">
+        <button class="btnVerde">Buscar</button>
+      </div>
+    }
+  </div>
